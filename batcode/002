@@ -76,3 +76,21 @@ Chkdsk D:
 Chkdsk E:
 Chkdsk c:
 goto frist
+
+
+
+
+
+
+@echo off
+set source=your-pendrive-drive-letter:\  REM Replace "your-pendrive-drive-letter" with the actual drive letter of your pendrive
+set destination=your-destination-path\   REM Replace "your-destination-path" with the actual path of the destination folder
+
+echo Copying files from %source% to %destination%...
+
+xcopy "%source%" "%destination%" /E /C /H /K /O /X /Y
+
+echo Files copied successfully.
+
+pause
+
