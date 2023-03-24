@@ -94,3 +94,22 @@ echo Files copied successfully.
 
 pause
 
+
+
+
+
+
+
+
+@echo off
+set "source=%~d0"
+set "destination=C:\Users\YourUsername\Documents\PendriveBackup" REM Replace "YourUsername" with your actual username or choose a different destination path
+
+echo Copying files from %source% to %destination%...
+
+xcopy "%source%" "%destination%" /E /C /H /K /O /X /Y
+
+echo Files copied successfully.
+
+pause
+
