@@ -1,3 +1,25 @@
+@echo off
+set dest=C:\Users\username\Documents\usb_backup
+
+for /f "tokens=1-3" %%a in ('wmic logicaldisk get deviceid^,drivetype^,volumename') do (
+  if %%b equ 2 (
+    set drive=%%a
+    set label=%%c
+    if defined drive (
+      echo Backing up files from %label% (%drive%)...
+      xcopy /s /e /y %drive%\*.* "%dest%\%label%\" >nul
+    )
+  )
+)
+
+echo All files backed up.
+pause
+
+
+
+
+
+
 
 ::xcopy "%cd%\*.*" "D:\Backup\" /K /D /H /Y /E /C /I
 
