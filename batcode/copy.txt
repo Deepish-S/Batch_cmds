@@ -1,0 +1,2 @@
+@echo off
+xcopy /s/e/i/h/y D:\*.* C:\PenDriveBackup
