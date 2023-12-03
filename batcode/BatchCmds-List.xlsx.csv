@@ -1,0 +1,138 @@
+get all bat cmds : https://ss64.com/
+
+Data Types in Batch
+Integers – Batch supports the whole set of positive and negative integers
+Strings – Unlike most programming languages we rarely use (“”) double-quotes here but we use ‘echo‘ command to print strings
+REM: Adds comments to a batch file.
+
+Variables in Batch Scripting
+To create variables we use the command “SET” command. 
+"A variable, unlike many programming languages, can be assigned simply without specifying any data type to it."
+
+EX : SET my_variable=Hello World
+
+Arithmetic Operators in a Batch Script
+List of operators :
+
+SET /A sum=1+1     ::addition operator
+ECHO %sum%     
+SET /A mul=7*9     ::multiplication operator
+ECHO %mul%
+SET /A div=9/3     ::Division operator
+ECHO %div%
+SET /A assign=10   ::Assignment operator
+ECHO %assign%
+SET /A assign+=15  ::Increment then assignment operator
+ECHO %assign%
+SET /A mod= 10%3   ::Modulus/Remainder operator
+ECHO %mod%
+
+"Control structures (IF, FOR, WHILE, GOTO)"
+IF
+Example: if errorlevel 1 goto true_block
+Example: if errorlevel 0 goto false_block
+FOR
+Example: for /R %f IN (*) DO echo %f
+WHILE
+Example: time /t 100 > nul 2>&1
+GOTO
+Example: label: end_of_program
+
+Date and Time
+Example: time /t
+Example: date /t
+
+"Input/Output (ECHO, INPUT, ECHO OFF)"
+ECHO
+"Example: echo ""Hello, World!"""
+INPUT
+Example: set var=
+ECHO OFF
+Example: @echo Off
+
+"// Here is a list of common batch file commands, along with their functionalities and sample one-line codes:"
+ASSOC: Displays or modifies file extension associations.
+Example: ASSOC .txt=txtfile
+ATTRIB: Displays or changes file attributes.
+Example: ATTRIB +R file.txt
+CALL: Calls one batch program from another.
+Example: CALL program.bat
+CD or CHDIR: Changes the current directory.
+Example: CD C:\Example
+CLS: Clears the screen.
+Example: CLS
+COLOR: Sets the console foreground and background colors.
+Example: COLOR 0A
+DATE: Displays or sets the date.
+Example: DATE
+"ECHO: Displays messages, or turns command echoing on or off."
+Example: ECHO Hello World
+EXIT: Quits the CMD.EXE program (command interpreter).
+Example: EXIT
+FOR: Runs a specified command for each file in a set of files.
+Example: FOR %%G IN (*.txt) DO ECHO %%G
+GOTO: Directs the Windows command interpreter to a labeled line in a batch program.
+Example: GOTO label
+IF: Performs conditional processing in batch programs.
+Example: IF EXIST file.txt ECHO File exists
+MKDIR or MD: Creates a directory.
+Example: MKDIR NewFolder
+PATH: Displays or sets a search path for executable files.
+Example: PATH C:\Windows\System32
+PAUSE: Suspends processing of a batch file and displays a message.
+Example: PAUSE
+REM: Adds comments to a batch file.
+Example: REM This is a comment
+RMDIR: Removes a directory.
+Example: RMDIR OldFolder
+"SET: Displays, sets, or removes environment variables."
+Example: SET VAR=value
+TIME: Displays or sets the system time.
+Example: TIME
+TITLE: Sets the window title for a CMD.EXE session.
+Example: TITLE My Batch File
+DIR: Displays a list of files and subdirectories in a directory.
+Example: DIR
+VAR: Sets or reads environment variables.
+Example: SET VAR=value
+"ECHO: Displays messages, or turns command echoing on or off."
+Example: ECHO Hello World
+EXIT: Quits the CMD.EXE program (command interpreter).
+Example: EXIT
+FOR: Runs a specified command for each file in a set of files.
+Example: FOR %%G IN (*.txt) DO ECHO %%G
+GOTO: Directs the Windows command interpreter to a labeled line in a batch program.
+Example: GOTO label
+IF: Performs conditional processing in batch programs.
+Example: IF EXIST file.txt ECHO File exists
+MKDIR or MD: Creates a directory.
+Example: MKDIR NewFolder
+PATH: Displays or sets a search path for executable files.
+Example: PATH C:\Windows\System32
+PAUSE: Suspends processing of a batch file and displays a message.
+Example: PAUSE
+Example: REM This is a comment
+RMDIR: Removes a directory.
+Example: RMDIR OldFolder
+"SET: Displays, sets, or removes environment variables."
+Example: SET VAR=value
+TIME: Displays or sets the system time.
+Example: TIME
+TITLE: Sets the window title for a CMD.EXE session.
+Example: TITLE My Batch File
+
+Devices
+"Example: copy ""source.txt"" ""destination.txt"""
+Registry
+Example: reg query HKEY_LOCAL_MACHINE\SOFTWARE\CompanyName
+Network
+Example: ping -a 192.168.1.1
+
+"DIR – The ‘dir’ command is used to get all the directories, sub-directories, and files present in the current working directory."
+CD – The ‘cd’ command is used to change the current working directory.
+VER – The ‘ver’ command tells the version of the user’s Windows.
+CLS – The ‘cls’ command is used to clear the screen of the command prompt.
+ECHO – The ‘echo’ command is by default ‘on’ but if we turn it off by ‘echo off’ it turns off prompt till the time ‘echo on’ is passed.
+@ – The ‘@’ if used before any command hides which command is running.
+@ECHO OFF – This commands serves as the start point to any basic batch script as it hides the prompt with ‘echo off’ and hides ‘echo off’ command with ‘@’.
+HELP – This command tells us all about the commands available in the cmd. It runs only if the cmd is run as an administrator.
